@@ -470,38 +470,147 @@
                 font-size: 2.5rem;
             }
             
+            .payment-cards-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 15px;
+            }
+            
+            /* تعديلات للهواتف: جعل البطاقات أصغر وعرض بطاقتين في الصف */
             .payment-card {
-                width: 100%;
-                max-width: 350px;
+                width: calc(50% - 10px);
+                min-width: 0;
+                margin-bottom: 15px;
             }
             
             .card-image-container {
-                height: 160px;
+                height: 120px;
+                padding: 10px;
+            }
+            
+            .card-title {
+                padding: 15px 10px 10px;
+            }
+            
+            .card-title h3 {
+                font-size: 1.4rem;
+            }
+            
+            .card-title p {
+                font-size: 0.9rem;
+            }
+            
+            .card-footer {
+                padding: 15px 10px;
+            }
+            
+            .select-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+                width: 140px;
             }
             
             .details-header {
                 flex-direction: column;
                 text-align: center;
                 gap: 15px;
-                padding: 30px 20px;
+                padding: 25px 15px;
+            }
+            
+            .details-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
             }
             
             .details-header h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+            
+            .details-content {
+                padding: 20px;
+            }
+            
+            .payment-info {
+                padding: 20px;
+                font-size: 0.95rem;
+            }
+            
+            .payment-data {
+                padding: 15px;
+            }
+            
+            .data-value {
+                font-size: 1.3rem;
+                padding: 10px;
             }
             
             .action-buttons {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
+                gap: 10px;
             }
             
             .action-btn {
                 width: 100%;
-                max-width: 300px;
+                min-width: auto;
+                padding: 14px 20px;
+            }
+            
+            .details-image {
+                max-width: 250px;
             }
             
             .notification-section {
-                padding: 30px 20px;
+                padding: 25px 15px;
+            }
+            
+            .notification-header h3 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-method {
+                min-width: 100%;
+            }
+            
+            .selection-message {
+                font-size: 1rem;
+                padding: 15px;
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+            
+            .selection-message i {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* تعديلات إضافية للشاشات الصغيرة جداً */
+        @media (max-width: 480px) {
+            .payment-card {
+                width: 100%;
+            }
+            
+            .select-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .details-header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .details-image {
+                max-width: 200px;
+            }
+        }
+        
+        /* للحفاظ على نفس الشكل لشاشات الكبيرة */
+        @media (min-width: 769px) {
+            .payment-card {
+                width: 320px;
             }
         }
     </style>
